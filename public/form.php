@@ -10,9 +10,7 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         $uploadFile = $uploadDir . uniqid(). '.' . $extension;
 
         if( $_FILES['avatar']['size'] > $maxFileSize) {
-            $errors[] = "Votre fichier doit faire moins de 1M !";
-            echo $errors;
-    }
+            $errors[] = "Votre fichier doit faire moins de 1M !";    }
 
     if (empty($errors)) {
         move_uploaded_file($_FILES['avatar']['tmp_name'], $uploadFile)
