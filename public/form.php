@@ -2,7 +2,7 @@
 if($_SERVER['REQUEST_METHOD'] === "POST"){ 
     $extension = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
     $authorizedExtensions = ['jpg','jpeg','png'];
-    $maxFileSize = 2000000;
+    $maxFileSize = 1000000;
     
 
     if(in_array($extension, $authorizedExtensions)){
